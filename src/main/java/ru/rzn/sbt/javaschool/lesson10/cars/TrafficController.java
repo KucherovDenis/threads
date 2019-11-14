@@ -8,14 +8,6 @@ public class TrafficController {
 
     private volatile AtomicInteger countRight = new AtomicInteger(0);
 
-    private void waitTime() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void enterLeft() {
         while (countRight.get() != 0) {
         }
