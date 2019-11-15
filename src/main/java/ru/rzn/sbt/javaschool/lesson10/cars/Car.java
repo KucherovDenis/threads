@@ -47,7 +47,7 @@ public class Car implements Runnable {
                     if (ypos > bridgeY) ypos -= 2;
                 } else if (xpos >= bridgeXRight2 && xpos < bridgeXRight) {
                     if (ypos < initY[REDCAR]) ypos += 2;
-                } else if (xpos >= bridgeXRight && xposOld < bridgeXRight) controller.leaveLeft();
+                } else if (xpos >= bridgeXRight && xposOld < bridgeXRight) controller.leaveRight();//controller.leaveLeft();
             }
         } else {
             if (xpos - inFront.getX() > 100) {
@@ -57,7 +57,7 @@ public class Car implements Runnable {
                     if (ypos < bridgeY) ypos += 2;
                 } else if (xpos <= bridgeXLeft2 && xpos > bridgeXLeft) {
                     if (ypos > initY[BLUECAR]) ypos -= 2;
-                } else if (xpos <= bridgeXLeft && xposOld > bridgeXLeft) controller.leaveRight();
+                } else if (xpos <= bridgeXLeft && xposOld > bridgeXLeft) controller.leaveLeft();//controller.leaveRight();
             }
         }
     }
